@@ -1,0 +1,28 @@
+{
+  "tareas": [
+    {
+      "id": "12",
+      "titulo": "primera tarea",
+      "descripcion": "descripcion base",
+      "fechaLimite": "15-05-2025"
+    },
+    {
+      "id": "13",
+      "titulo": "revisar documentación",
+      "descripcion": "Leer y resumir los documentos técnicos del proyecto",
+      "fechaLimite": "2025-05-23"
+    },
+    {
+      "id": "14",
+      "titulo": "diseñar interfaz",
+      "descripcion": "Crear un prototipo de la nueva interfaz de usuario",
+      "fechaLimite": "22-05-2025"
+    },
+    {
+      "id": "15",
+      "titulo": "realizar pruebas",
+      "descripcion": "Ejecutar pruebas unitarias y de integración",
+      "fechaLimite": "25-05-2025"
+    }
+  ]
+}
