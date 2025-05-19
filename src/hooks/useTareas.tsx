@@ -28,7 +28,7 @@ export const useTareas = () => {
         await postNuevaTarea(nuevaTarea);
        } catch (error) {
         eliminarUnaTarea(nuevaTarea.id!)
-        console.log("Algo salio mal al crear la tarea")
+        console.error("Algo salio mal al crear la tarea")
        }
     }
 
@@ -41,13 +41,12 @@ export const useTareas = () => {
         await editarUnaTarea(tareaEditada);
        } catch (error) {
           if(estadoPrevio)  editarTarea(estadoPrevio);
-          console.log("Algo salio mal al editar")
+          console.error("Algo salio mal al editar")
        }
     }
 
     const eliminarTarea = async(idTarea: string)=>{
        const estadoPrevio = tareas.find((el)=>el.id === idTarea)
-        eliminarUnaTarea(idTarea);
         const confirm = await Swal.fire(
             {title: "Desea eliminar esta tarea?", 
               text:  "Una vez eliminada no hay vuelta atras", 
@@ -65,7 +64,7 @@ export const useTareas = () => {
        
         } catch (error) {
             if (estadoPrevio) agregarNuevaTarea(estadoPrevio)
-            console.log("Algo salio mal al eliminar una tarea")
+            console.error("Algo salio mal al eliminar una tarea")
         }
     }
 
